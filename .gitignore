@@ -1,0 +1,153 @@
+# =============================================================
+# adversarial-robust-nids .gitignore
+# =============================================================
+
+# ---------- 비밀 정보 (API 키 / 토큰 / 인증서) ----------
+.env
+.env.*
+!.env.example
+*.env
+secrets/
+secret/
+credentials/
+credentials.json
+secrets.json
+secrets.yaml
+secrets.yml
+config.local.*
+*.local.yaml
+*.local.yml
+*.local.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.jks
+*.keystore
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+*.ppk
+.ssh/
+.aws/
+.gcp/
+*service-account*.json
+*serviceaccount*.json
+.netrc
+.npmrc
+.pypirc
+.htpasswd
+*.kdbx
+token.txt
+tokens.txt
+api_key*.txt
+apikey*.txt
+kaggle.json
+.kaggle/
+wandb/
+.wandb/
+.comet.config
+.neptune/
+
+# ---------- 데이터셋 (용량 큼 / 라이선스 / 공유 부적합) ----------
+data/
+datasets/
+dataset/
+raw_data/
+*.pcap
+*.pcapng
+*.cap
+*.csv
+*.parquet
+*.feather
+*.arrow
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.joblib
+*.tfrecord
+# 작은 샘플 데이터는 아래처럼 예외로 허용
+!data/sample/
+!data/sample/**
+!data/README.md
+
+# ---------- 모델 가중치 / 학습 산출물 ----------
+checkpoints/
+checkpoint/
+weights/
+saved_models/
+models/*.bin
+runs/
+logs/
+outputs/
+results/
+mlruns/
+lightning_logs/
+tensorboard/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+*.tflite
+*.keras
+*.weights.h5
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+.venv/
+venv/
+env/
+ENV/
+.python-version
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.ipynb_checkpoints/
+*.log
+
+# ---------- Jupyter ----------
+# 노트북 출력에 데이터/키가 섞일 수 있으니 필요하면 nbstripout 사용 권장
+
+# ---------- IDE / 에디터 ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.history/
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ---------- 도구 로컬 상태 ----------
+.omc/
+.claude/settings.local.json
+
+# ---------- 공유하지 않는 로컬 폴더 ----------
+CES 2027 참관/
+참고자료/
+
+# ---------- 논문 / 참고자료 PDF (저작권, 공유 제외) ----------
+*.pdf
